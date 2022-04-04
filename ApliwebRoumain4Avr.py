@@ -990,7 +990,7 @@ if __name__ == '__main__':
                             Email='adresa de Email',
                             user1="contactbiencommun@gmail.com",
                             mypassword="2022Succes.",
-                            mailto="j.ralaizanaka@gmail.com",
+                            mailto="contactbiencommun@gmail.com",
                             sujet="Nou potential client",
                             messageRes="Sa trecem la actiune",
                             nom_bouton_soumettre='Trimite')
