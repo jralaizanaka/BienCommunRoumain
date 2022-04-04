@@ -1,1 +1,2 @@
-web: sh setup.sh && streamlit run EnvoiFormulaire.py
+web: sh setup.sh && streamlit run --server.enableCORS false ApliwebRoumain4Avr.py
+
