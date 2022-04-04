@@ -999,7 +999,7 @@ if __name__ == '__main__':
                             titre="RADIOGRAPHIE PROFESIONALA:",
                             sous_titre="Formular de contact 🎨")
 
-    v=formulaire.cree_formulaire()
+    v = formulaire.cree_formulaire()
 
     message1 = "Va rog sa completati si sa verificati formularul pentru a putea merge mai departe"
 
@@ -1421,39 +1421,39 @@ if __name__ == '__main__':
 
 
 
-        else:
+            else:
 
-                if verifT[0] == True:
-                    st.error("Testul A a fost făcut greșit")
+                    if verifT[0] == True:
+                        st.error("Testul A a fost făcut greșit")
 
-                if verifT[1] == True:
-                    st.error("Testul B a fost făcut greșit")
+                    if verifT[1] == True:
+                        st.error("Testul B a fost făcut greșit")
 
-                if verifT[2] == True:
-                    st.error("Testul C a fost făcut greșit")
+                    if verifT[2] == True:
+                        st.error("Testul C a fost făcut greșit")
 
-                if verifT[3] == True:
-                    st.error("Testul D a fost făcut greșit")
+                    if verifT[3] == True:
+                        st.error("Testul D a fost făcut greșit")
 
-                if verifT[4] == True:
-                    st.error("Testul E a fost făcut greșit")
+                    if verifT[4] == True:
+                        st.error("Testul E a fost făcut greșit")
 
-                if verifT[5] == True:
-                    st.error("Testul F a fost făcut greșit")
+                    if verifT[5] == True:
+                        st.error("Testul F a fost făcut greșit")
 
-                if verifT[6] == True:
-                    st.error("Testul G a fost făcut greșit")
+                    if verifT[6] == True:
+                        st.error("Testul G a fost făcut greșit")
 
-                if verifT[7] == True:
-                    st.error("Testul H a fost făcut greșit")
+                    if verifT[7] == True:
+                        st.error("Testul H a fost făcut greșit")
 
-                if verifT[8] == True:
-                    st.error("Testul I a fost făcut greșit")
+                    if verifT[8] == True:
+                        st.error("Testul I a fost făcut greșit")
 
-                if v == False:
-                    st.error("Nu ați trimis formularul")
+                    if v == False:
+                        st.error("Nu ați trimis formularul")
 
-                # =======================================================================================================
+                    # =======================================================================================================
 
-                # =======================================================================================================
+                    # =======================================================================================================
 
