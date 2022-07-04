@@ -989,7 +989,7 @@ if __name__ == '__main__':
                             numtel='Numar de telefon',
                             Email='adresa de Email',
                             user1="contactbiencommun@gmail.com",
-                            mypassword="2022Succes.",
+                            mypassword="jpmddlwwhvelxkyu",
                             mailto="contactbiencommun@gmail.com",
                             sujet="Nou potential client",
                             messageRes="Sa trecem la actiune",
