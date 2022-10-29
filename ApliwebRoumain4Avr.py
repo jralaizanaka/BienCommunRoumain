@@ -14,13 +14,13 @@ from PIL import Image
 class Formulaire:
 
     def __init__(self,
-                 nom,
+                 #nom,
                  prénom,
-                 ddn,
-                 formation,
-                 emploi,
+                 #ddn,
+                 #formation,
+                 #emploi,
                  sexe_sujet,
-                 emploi_envisagé,
+                 #emploi_envisagé,
                  numtel,
                  Email,
                  user1,
@@ -34,13 +34,13 @@ class Formulaire:
 
 
                  ):
-        self.nom = nom
+        #self.nom = nom
         self.prénom = prénom
-        self.ddn = ddn
-        self.formation = formation
-        self.emploi = emploi
+        #self.ddn = ddn
+        #self.formation = formation
+        #self.emploi = emploi
         self.sexe_sujet = sexe_sujet
-        self.emploi_envisagé = emploi_envisagé
+        #self.emploi_envisagé = emploi_envisagé
         self.numtel = numtel
         self.Email = Email
         self.user1 = user1
@@ -56,18 +56,23 @@ class Formulaire:
         st.image(image)
         st.title(titre)
         st.subheader(sous_titre)
+        
+    def cree_en_tête2(self,titre,sous_titre):
+        """crée l'entête du site"""
+        st.title(titre)
+        st.subheader(sous_titre)
 
 
     def cree_formulaire(self):
         """crée un formulaire """
         with st.form(key='my_form'):
-            nom = st.text_input(self.nom)
+            #nom = st.text_input(self.nom)
             prénom = st.text_input(self.prénom)
-            ddn = st.text_input(self.ddn)
-            formation = st.text_input(self.formation)
-            emploi = st.text_input(self.emploi)
+            #ddn = st.text_input(self.ddn)
+            #formation = st.text_input(self.formation)
+            #emploi = st.text_input(self.emploi)
             sexe_sujet = st.text_input(self.sexe_sujet)
-            emploi_envisagé = st.text_input(self.emploi_envisagé)
+            #emploi_envisagé = st.text_input(self.emploi_envisagé)
             numtel = st.text_input(self.numtel)
             Email = st.text_input(self.Email)
             if "is_ok" not in st.session_state:
@@ -81,10 +86,14 @@ class Formulaire:
                 #st.write("apres", st.session_state)
                 dateCompletDuJour = str(dt.datetime.today().isoformat())[0:16]
 
-                message_mail = self.date + " :" + dateCompletDuJour + "\n" + self.nom + " :" + nom + "\n" + self.prénom + " :" + prénom + "\n" + \
-                               self.ddn + " :" + ddn + "\n" + \
-                               self.formation + " :" + formation + "\n" + self.emploi + " :" + emploi + "\n" + \
-                               self.sexe_sujet + " :" + sexe_sujet + "\n" + self.emploi_envisagé + " :" + emploi_envisagé + "\n" + \
+                #message_mail = self.date + " :" + dateCompletDuJour + "\n" + self.nom + " :" + nom + "\n" + self.prénom + " :" + prénom + "\n" + \
+                               #self.ddn + " :" + ddn + "\n" + \
+                               #self.formation + " :" + formation + "\n" + self.emploi + " :" + emploi + "\n" + \
+                               #self.sexe_sujet + " :" + sexe_sujet + "\n" + self.emploi_envisagé + " :" + emploi_envisagé + "\n" + \
+                               #self.numtel + " :" + numtel + "\n" + self.Email + " :" + Email
+                
+                message_mail = self.date + " :" + dateCompletDuJour + self.prénom + " :" + prénom + "\n" + \
+                               self.sexe_sujet + " :" + sexe_sujet + \
                                self.numtel + " :" + numtel + "\n" + self.Email + " :" + Email
 
                 yag = yagmail.SMTP(user=self.user1, password=self.mypassword)
@@ -147,8 +156,9 @@ class Radiographie:
 
     def edit_test(self):
         """edit the different tests"""
-        nomkey = self.intitule+ self.nom_test1
-
+        #nomkey = self.intitule+ self.nom_test1
+        nomkey = self.nom_test1
+        
         st.subheader(nomkey)
 
         with st.form(key=nomkey):
@@ -969,23 +979,23 @@ Réaliste_F = {9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 0, 18:
 if __name__ == '__main__':
 
     # configuration of the page
-    img1=Image.open("ImageMin.png")
+    #img1=Image.open("ImageMin.png")
 
     st.set_page_config(
-        page_title="Bien Commun",
-        page_icon=img1,
+        #page_title="Bien Commun",
+        "page_icon=img1,
         layout="wide"
     )
 
 
 
-    formulaire= Formulaire(nom='Nume',
+    formulaire= Formulaire(#nom='Nume',
                             prénom='Prenume',
-                            ddn='Data de nastere',
-                            formation='Formare',
-                            emploi='Loc de munca actual',
+                            #ddn='Data de nastere',
+                            #formation='Formare',
+                            #emploi='Loc de munca actual',
                             sexe_sujet='Sex  (F sau M)',
-                            emploi_envisagé='Loc de munca dorit',
+                            #emploi_envisagé='Loc de munca dorit',
                             numtel='Numar de telefon',
                             Email='adresa de Email',
                             user1="contactbiencommun@gmail.com",
@@ -995,9 +1005,14 @@ if __name__ == '__main__':
                             messageRes="Sa trecem la actiune",
                             nom_bouton_soumettre='Trimite')
 
-    formulaire.cree_en_tête(image="ImageBC.png",
-                            titre="RADIOGRAFIE PROFESIONALA:",
+    #formulaire.cree_en_tête(image="ImageBC.png",
+                          #  titre="RADIOGRAFIE PROFESIONALA:",
+                           # sous_titre="Formular de contact 🎨")
+    
+    formulaire.cree_en_tête2(titre="RADIOGRAFIE PROFESIONALA:",
                             sous_titre="Formular de contact 🎨")
+   
+
 
     v = formulaire.cree_formulaire()
 
