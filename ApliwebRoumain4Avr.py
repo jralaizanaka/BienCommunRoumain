@@ -983,7 +983,7 @@ if __name__ == '__main__':
 
     st.set_page_config(
         #page_title="Bien Commun",
-        "page_icon=img1,
+        #page_icon=img1,
         layout="wide"
     )
 
