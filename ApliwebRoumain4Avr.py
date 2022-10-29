@@ -996,7 +996,7 @@ if __name__ == '__main__':
                             nom_bouton_soumettre='Trimite')
 
     formulaire.cree_en_tête(image="ImageBC.png",
-                            titre="RADIOGRAPHIE PROFESIONALA:",
+                            titre="RADIOGRAFIE PROFESIONALA:",
                             sous_titre="Formular de contact 🎨")
 
     v = formulaire.cree_formulaire()
@@ -1180,7 +1180,7 @@ if __name__ == '__main__':
 
     # edit Video
 
-    radiographieA.insert_video('madga_vs_roum.mp4')
+    #radiographieA.insert_video('madga_vs_roum.mp4')
 
     # edit formulaire A
 
